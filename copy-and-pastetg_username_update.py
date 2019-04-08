@@ -66,6 +66,10 @@ async def change_name_auto():
                     last_name = '%s' % dizzy
                 else:
                     last_name = '%s' % cake
+                else:
+                    last_name = '%s' % bear
+                else:
+                    last_name = '%s' % frog
         
                 await client1(UpdateProfileRequest(last_name=last_name))
                 logger.info('Updated -> %s' % last_name)
