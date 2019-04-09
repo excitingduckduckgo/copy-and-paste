@@ -60,16 +60,17 @@ async def change_name_auto():
                     last_name = '%s时%s分 %s' % (hour, minu, hsym)
                 elif for_fun < 0.30:
                     last_name = '%s:%s %s %s %s' % (hour, minu, p, abbwn, hsym)
+                elif for_fun < 0.40:
+                    last_name = '%s' % bear
+                else:
+                    last_name = '%s' % frog
                 elif for_fun < 0.60:
                     last_name = '%s:%s %s UTC+8 %s' % (hour, minu, p, hsym)
                 elif for_fun < 0.90:
                     last_name = '%s' % dizzy
                 else:
                     last_name = '%s' % cake
-                else:
-                    last_name = '%s' % bear
-                else:
-                    last_name = '%s' % frog
+
         
                 await client1(UpdateProfileRequest(last_name=last_name))
                 logger.info('Updated -> %s' % last_name)
